@@ -3,7 +3,28 @@
 	<head>
 		<title>Apurva Ramanujam</title>
 		<link href="js/js-image-slider.css" rel="stylesheet" type="text/css" />
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
     	<script src="js/js-image-slider.js" type="text/javascript"></script>
+    	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+   		<script type="text/javascript" src="js/jssor.js"></script>
+   		<script type="text/javascript" src="js/jssor.slider.js"></script>
+	    <script>
+	        jQuery(document).ready(function ($) {
+	            var options = {
+	                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+	                $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+	                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+	                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+	                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+	                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+	                }
+	            };
+
+	            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+	        });
+	    </script>
+
 		<style type="text/css">
 			header, section, footer, aside, nav, article, figure, figcaption {
 				display: block;}
@@ -55,8 +76,8 @@
 				margin-top: 40px;}
 			figure {
 				float: left;
-				width: 585px;
-				height: 585px;
+				width: 900px;
+				height: 900px;
 				padding: 5px;
 				margin: 20px;}
 			figcaption {
@@ -109,34 +130,96 @@
 			<section class="courses">
 				<article>
 					<figure>
-				    <div id="sliderFrame">
-				        <div id="slider">
-				            <img src="images/slide1.jpg" alt="" />
-				            <img src="images/slide2.jpg" alt="" />
-				            <img src="images/slide3.jpg" alt="" />	
-				            <img src="images/slide4.jpg" alt="" />
-				            <img src="images/slide5.jpg" alt="" />
-				            <img src="images/slide6.jpg" alt="" />	
-				            <img src="images/slide7.jpg" alt="" />
-				            <img src="images/slide8.jpg" alt="" />
-				            <img src="images/slide9.jpg" alt="" />	
-				            <img src="images/slide10.jpg" alt="" />
-				            <img src="images/slide11.jpg" alt="" />
-				            <img src="images/slide12.jpg" alt="" />	
-				            <img src="images/slide13.jpg" alt="" />
-				            <img src="images/slide14.jpg" alt="" />
-				            <img src="images/slide15.jpg" alt="" />	
-				            <img src="images/slide16.jpg" alt="" />
-				            <img src="images/slide17.jpg" alt="" />
-				            <img src="images/slide18.jpg" alt="" />
-				            <img src="images/slide19.jpg" alt="" />	
-				            <img src="images/slide20.jpg" alt="" />
-				            <img src="images/slide21.jpg" alt="" />
-				            <img src="images/slide22.jpg" alt="" />	
-				            <img src="images/slide23.jpg" alt="" />
-				            <img src="images/slide24.jpg" alt="" />
-				        </div>
-				    </div>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 900px;
+        height: 900px; ">
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 900px; height: 900px;
+            overflow: hidden;">
+            <div><img u="image" src="images/slide1.jpg" /></div>
+            <div><img u="image" src="images/slide2.jpg" /></div>
+            <div><img u="image" src="images/slide3.jpg" /></div>
+            <div><img u="image" src="images/slide4.jpg" /></div>
+            <div><img u="image" src="images/slide5.jpg" /></div>
+            <div><img u="image" src="images/slide6.jpg" /></div>
+            <div><img u="image" src="images/slide7.jpg" /></div>
+            <div><img u="image" src="images/slide8.jpg" /></div>
+            <div><img u="image" src="images/slide9.jpg" /></div>
+            <div><img u="image" src="images/slide10.jpg" /></div>
+            <div><img u="image" src="images/slide11.jpg" /></div>
+            <div><img u="image" src="images/slide12.jpg" /></div>
+            <div><img u="image" src="images/slide13.jpg" /></div>
+            <div><img u="image" src="images/slide14.jpg" /></div>
+            <div><img u="image" src="images/slide15.jpg" /></div>
+            <div><img u="image" src="images/slide16.jpg" /></div>
+            <div><img u="image" src="images/slide17.jpg" /></div>
+            <div><img u="image" src="images/slide18.jpg" /></div>
+            <div><img u="image" src="images/slide19.jpg" /></div>
+            <div><img u="image" src="images/slide20.jpg" /></div>    
+            <div><img u="image" src="images/slide21.jpg" /></div>
+            <div><img u="image" src="images/slide22.jpg" /></div>
+            <div><img u="image" src="images/slide23.jpg" /></div>
+            <div><img u="image" src="images/slide24.jpg" /></div>
+            <div><img u="image" src="images/slide25.jpg" /></div>
+            <div><img u="image" src="images/slide26.jpg" /></div>
+            <div><img u="image" src="images/slide27.jpg" /></div>
+            <div><img u="image" src="images/slide28.jpg" /></div>
+            <div><img u="image" src="images/slide29.jpg" /></div>
+            <div><img u="image" src="images/slide30.jpg" /></div>
+            <div><img u="image" src="images/slide31.jpg" /></div>
+            <div><img u="image" src="images/slide32.jpg" /></div>
+            <div><img u="image" src="images/slide33.jpg" /></div>
+            <div><img u="image" src="images/slide34.jpg" /></div>
+            <div><img u="image" src="images/slide35.jpg" /></div>
+            <div><img u="image" src="images/slide36.jpg" /></div>
+            <div><img u="image" src="images/slide37.jpg" /></div>
+            <div><img u="image" src="images/slide38.jpg" /></div>
+            <div><img u="image" src="images/slide39.jpg" /></div>
+            <div><img u="image" src="images/slide40.jpg" /></div>    
+            <div><img u="image" src="images/slide41.jpg" /></div>
+            <div><img u="image" src="images/slide42.jpg" /></div>
+            <div><img u="image" src="images/slide43.jpg" /></div>
+            <div><img u="image" src="images/slide44.jpg" /></div>
+        </div>
+        
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider arrow navigator skin 03 css */
+            /*
+            .jssora03l              (normal)
+            .jssora03r              (normal)
+            .jssora03l:hover        (normal mouseover)
+            .jssora03r:hover        (normal mouseover)
+            .jssora03ldn            (mousedown)
+            .jssora03rdn            (mousedown)
+            */
+            .jssora03l, .jssora03r, .jssora03ldn, .jssora03rdn
+            {
+            	position: absolute;
+            	cursor: pointer;
+            	display: block;
+                background: url(images/a03.png) no-repeat;
+                overflow:hidden;
+            }
+            .jssora03l { background-position: -3px -33px; }
+            .jssora03r { background-position: -63px -33px; }
+            .jssora03l:hover { background-position: -123px -33px; }
+            .jssora03r:hover { background-position: -183px -33px; }
+            .jssora03ldn { background-position: -243px -33px; }
+            .jssora03rdn { background-position: -303px -33px; }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora03l" style="width: 55px; height: 55px; top: 50px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora03r" style="width: 55px; height: 55px; top: 50px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">javascript</a>
+    </div>
+    <!-- Jssor Slider End -->
 				</figure>
 				</article>    
 			</section>

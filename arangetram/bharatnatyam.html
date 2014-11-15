@@ -95,6 +95,14 @@
 				margin-left: 10px;
 				margin-right: 10px;
 			}
+			blink {
+			    display: inline;
+			    color: inherit;
+			    animation: blink 1s steps(1) infinite;
+			    -webkit-animation: blink 1s steps(1) infinite;
+			}
+			@keyframes blink { 50% { color: transparent; } }
+			@-webkit-keyframes blink { 60% { color: transparent; } }
 		</style>
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -106,7 +114,7 @@
 				<h1>Apurva Arangetram</h1>
 				<nav>
 					<ul>
-						<li><a href="./livestream.html" class="current">Watch the arangetram live</a></li>
+						<li><a href="./program.html" class="current"><blink>Click here to watch the arangetram live. </blink>Starts at 4pm Eastern Time Saturday</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -131,7 +139,6 @@
 					<a href="bharatnatyam.html">Bharatanatyam</a>
 					<a href="arangetram.html">Arangetram</a>
 					<a href="guru.html">Guru</a>
-					<a href="livestream.html">Live Video</a>
 					<a href="program.html">Program</a>
 					<a href="orchestra.html">Orchestra</a>
 					<a href="acknowledgements.html">Acknowledgements</a>
